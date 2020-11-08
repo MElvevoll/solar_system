@@ -91,7 +91,7 @@ List<AstronomicalObject> listOfObjects = [
           "It only has one-eighth the average density of Earth; however, with its larger volume, Saturn is over 95 times more massive. "
           "Saturn is named after the Roman god of wealth and agriculture; its astronomical symbol (♄) represents the god's sickle. ",
       imageSrc:
-          "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg"),
+          "https://upload.wikimedia.org/wikipedia/commons/7/7e/Saturn_with_auroras.jpg"),
   AstronomicalObject(
       name: "Uranus",
       alternateNames: "",
