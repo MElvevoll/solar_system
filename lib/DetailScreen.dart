@@ -58,7 +58,6 @@ class DetailScreen extends StatelessWidget {
                   progressIndicatorBuilder: (context, url, progress) =>
                       CircularProgressIndicator(value: progress.progress),
                   errorWidget: (context, url, error) => Icon(Icons.error)),
-              //Image.network(object.imageSrc, fit: BoxFit.cover),
               titleSection,
               highlightSection,
               textSection

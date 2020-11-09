@@ -38,7 +38,7 @@ class AstronomicalObjectScreen extends StatelessWidget {
                     child: CachedNetworkImage(
                       imageUrl: object[index].imageSrc,
                       imageBuilder: (context, provider) => Container(
-                          height: 60.0,
+                          height: 80.0,
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             image: DecorationImage(
@@ -50,7 +50,7 @@ class AstronomicalObjectScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 30),
                       alignment: Alignment.center,
                       child: Text(object[index].name))
                 ]),
