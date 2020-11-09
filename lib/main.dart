@@ -33,20 +33,27 @@ class AstronomicalObjectScreen extends StatelessWidget {
             itemCount: object.length,
             itemBuilder: (context, index) {
               return ListTile(
-                //title: Text(object[index].name),
-                leading: CachedNetworkImage(
-                  imageUrl: object[index].imageSrc,
-                  progressIndicatorBuilder: (context, url, progress) =>
-                      CircularProgressIndicator(value: progress.progress),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
-
-                  /* Image.network(
-                  object[index].imageSrc,
-                  fit: BoxFit.contain,
-                  width: 200,
-                  height: 200,*/
-                ),
-                title: Text(object[index].name),
+                title: Stack(children: <Widget>[
+                  Container(
+                    child: CachedNetworkImage(
+                      imageUrl: object[index].imageSrc,
+                      imageBuilder: (context, provider) => Container(
+                          height: 60.0,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            image: DecorationImage(
+                                image: provider, fit: BoxFit.cover),
+                          )),
+                      progressIndicatorBuilder: (context, url, progress) =>
+                          CircularProgressIndicator(value: progress.progress),
+                      errorWidget: (context, url, error) => Icon(Icons.error),
+                    ),
+                  ),
+                  Container(
+                      padding: EdgeInsets.only(top: 20),
+                      alignment: Alignment.center,
+                      child: Text(object[index].name))
+                ]),
                 onTap: () {
                   Navigator.push(
                       context,
